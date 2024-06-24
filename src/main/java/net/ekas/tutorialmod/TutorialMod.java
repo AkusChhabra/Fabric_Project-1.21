@@ -1,5 +1,6 @@
 package net.ekas.tutorialmod;
 
+import net.ekas.tutorialmod.block.ModBlocks;
 import net.ekas.tutorialmod.item.ModItemGroups;
 import net.ekas.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -15,6 +16,6 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
-
+		ModBlocks.registerModBlocks();
 	}
 }

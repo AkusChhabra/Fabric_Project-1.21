@@ -1,6 +1,7 @@
 package net.ekas.tutorialmod.item;
 
 import net.ekas.tutorialmod.TutorialMod;
+import net.ekas.tutorialmod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -21,6 +22,8 @@ public class ModItemGroups {
 
                         entries.add(Items.GOLDEN_APPLE);
 
+                        entries.add(ModBlocks.RUBY_BLOCK);
+                        entries.add(ModBlocks.RAW_RUBY_BLOCK);
                     }).build());
 
     public static void registerItemGroups() {
