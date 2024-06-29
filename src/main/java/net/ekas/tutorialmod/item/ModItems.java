@@ -1,6 +1,7 @@
 package net.ekas.tutorialmod.item;
 
 import net.ekas.tutorialmod.TutorialMod;
+import net.ekas.tutorialmod.item.custom.MetalDetectorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -15,6 +16,9 @@ public class ModItems {
     // Define items
     public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings()));
     public static final Item RAW_RUBY = registerItem("raw_ruby", new Item(new Item.Settings()));
+
+    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new
+            Item.Settings().maxDamage(64))); // Maximum of 64 hit points defined
 
     // Add items
     public static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
