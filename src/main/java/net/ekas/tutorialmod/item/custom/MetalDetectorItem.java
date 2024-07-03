@@ -30,17 +30,12 @@ public class MetalDetectorItem extends Item {
                 if (isValuableBlock(state)) {
                     outputValuableCoordinates(positionClicked.down(i), player, state.getBlock());
                     foundBlock = true;
-                    break;
+                    //break;
                 }
-            }
-
-            if (!foundBlock) {
-                player.sendMessage(Text.literal("No Valuables Found."));
             }
         }
 
         context.getStack().damage(1,context.getPlayer(), EquipmentSlot.MAINHAND);
-                //playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
 
         return ActionResult.SUCCESS;
     }
@@ -50,7 +45,8 @@ public class MetalDetectorItem extends Item {
                 "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), false);
     }
 
-    private boolean isValuableBlock(BlockState state) {
-        return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DIAMOND_ORE);
+    public boolean isValuableBlock(BlockState state) {
+        return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DIAMOND_ORE) || state.isOf(Blocks.GOLD_ORE)
+                || state.isOf(Blocks.LAPIS_ORE) || state.isOf(Blocks.REDSTONE_ORE) || state.isOf(Blocks.EMERALD_ORE);
     }
 }
